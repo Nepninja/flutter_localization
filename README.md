@@ -1,6 +1,6 @@
 # flutter_localization
 
-flutter_localization is a portfolio app that contains the implementation of localization on Flutter using bloc. 
+flutter_localization is an app that contains the implementation of localization on Flutter using bloc. 
 
 ## Video series
 
