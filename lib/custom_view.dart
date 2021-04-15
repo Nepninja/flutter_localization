@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localization/app_localization.dart';
 
 class CustomView extends StatelessWidget {
   final String heading;
@@ -16,7 +17,7 @@ class CustomView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          heading,
+          AppLocalization.of(context).getTranslatedValues(heading),
           style: TextStyle(color: Colors.white),
         ),
         SizedBox(
@@ -33,14 +34,14 @@ class CustomView extends StatelessWidget {
                 height: 15,
               ),
               Text(
-                title,
+                AppLocalization.of(context).getTranslatedValues(title),
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              Text(subtitle),
+              Text(AppLocalization.of(context).getTranslatedValues(subtitle)),
               SizedBox(
                 height: 5,
               ),
-              Text(description)
+              Text(AppLocalization.of(context).getTranslatedValues(description))
             ],
           ),
           decoration: BoxDecoration(

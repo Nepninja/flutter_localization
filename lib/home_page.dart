@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localization/app_localization.dart';
 import 'package:flutter_localization/next_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -33,7 +34,7 @@ class _HomePageState extends State<HomePage> {
               height: 10,
             ),
             Text(
-              "Frontend Developer",
+              AppLocalization.of(context).getTranslatedValues('frontend_developer'),
               style: TextStyle(fontSize: 25, color: Colors.white),
             ),
             SizedBox(
@@ -90,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                   side: BorderSide(width: 1.0, color: Colors.white)),
             ),
             Text(
-              "Know me more",
+              AppLocalization.of(context).getTranslatedValues('know_me_more'),
               style: TextStyle(color: Colors.white),
             )
           ],

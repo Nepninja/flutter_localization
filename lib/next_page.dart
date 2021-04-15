@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localization/app_localization.dart';
+import 'package:flutter_localization/bloc/language_bloc.dart';
 import 'package:flutter_localization/custom_view.dart';
 
 class NextPage extends StatefulWidget {
@@ -25,25 +28,25 @@ class _NextPageState extends State<NextPage> {
                     height: 5,
                   ),
                   CustomView(
-                    heading: "Professional History",
-                    title: "River Tech",
-                    subtitle: "Intern",
-                    description: "Worked on small feature.",
+                    heading: "professional_history",
+                    title: "river_tech",
+                    subtitle: "intern",
+                    description: "worked_on_small_feature",
                   ),
                   SizedBox(
                     height: 20,
                   ),
                   CustomView(
-                    heading: "Educational History",
-                    title: "Harvard University",
-                    subtitle: "Nov 2016 - Dec 2020",
-                    description: "Specialized on computer science",
+                    heading: "educational_history",
+                    title: "harvard_university",
+                    subtitle: "nov",
+                    description: "specialized_on_computer_science",
                   ),
                   SizedBox(
                     height: 20,
                   ),
                   Text(
-                    "Skills",
+                    AppLocalization.of(context).getTranslatedValues('skills'),
                     style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(
@@ -73,10 +76,10 @@ class _NextPageState extends State<NextPage> {
                     height: 20,
                   ),
                   CustomView(
-                    heading: "Awards and Achivements",
-                    title: "World Largest Hackathon",
-                    subtitle: "Winner",
-                    description: "Specialized on health care",
+                    heading: "awards_and_achievements",
+                    title: "world_largest_hackathon",
+                    subtitle: "winner",
+                    description: "specialized_on_health_care",
                   ),
                   SizedBox(
                     height: 50,
@@ -86,7 +89,7 @@ class _NextPageState extends State<NextPage> {
                     color: Colors.white,
                     onPressed: () {},
                     child: Text(
-                      "Hire me!",
+                      AppLocalization.of(context).getTranslatedValues('hire_me'),
                       style: TextStyle(color: Color(0xff728def)),
                     ),
                     shape: RoundedRectangleBorder(
@@ -108,6 +111,13 @@ class _NextPageState extends State<NextPage> {
             value: lang,
             onChanged: (value) {
               setState(() {
+                if (value == 'French') {
+                  BlocProvider.of<LanguageBloc>(context)
+                    ..add(LoadLanguage(locale: Locale('fr', '')));
+                } else
+                  BlocProvider.of<LanguageBloc>(context)
+                    ..add(LoadLanguage(locale: Locale('en', 'EN')));
+
                 lang = value;
               });
             },
