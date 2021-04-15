@@ -1,16 +1,30 @@
 # flutter_localization
 
-A new Flutter application.
+flutter_localization is a portfolio app that contains the implementation of localization on Flutter using bloc. 
 
-## Getting Started
+## Video series
 
-This project is a starting point for a Flutter application.
+Part 1 
 
-A few resources to get you started if this is your first Flutter project:
+ <div>
+   <div align="left">
+    <a href="https://www.youtube.com/embed/aeQzeDRADMw"><img src="https://img.youtube.com/vi/aeQzeDRADMw/hqdefault.jpg" alt=""></a>
+   </div> 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Part 2
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ <div>
+   <div align="left">
+    <a href="https://www.youtube.com/embed/mbllSsWKFvQ"><img src="https://img.youtube.com/vi/mbllSsWKFvQ/hqdefault.jpg" alt=""></a>
+   </div> 
+
+Part 3 
+
+ <div>
+   <div align="left">
+    <a href="https://www.youtube.com/embed/Y2wYB5ZhI7E"><img src="https://img.youtube.com/vi/Y2wYB5ZhI7E/hqdefault.jpg" alt=""></a>
+   </div> 
+  
+## References
+ - https://flutter.dev/docs/development/accessibility-and-localization/internationalization
+ - https://bloclibrary.dev/#/gettingstarted
